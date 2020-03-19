@@ -1,0 +1,47 @@
+---
+title: "preliminary-analyses"
+author: "rackerman27"
+date: "2020-03-19"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+
+## Introduction
+
+## Loading Libraries
+
+```{r}
+library(lattice)
+library(haven)
+```
+
+## Reading in data set
+
+```{r}
+SD_data <- read_sav("data/pairwise_SD_data.sav")
+View(SD_data)
+```
+
+## Visual Inspection of Variable Distributions Across Groups
+
+```{r}
+dotplot(
+  reorder(GROUPID, APARTNARC) ~ APARTNARC,
+  data = SD_data, jitter.y = TRUE,
+  ylab = "Speed-Dating Group",
+  main = "Dotplot of \'PARTNARC\' for Speed-Dating Groups")
+```
+
+```{r}
+dotplot(
+  reorder(GROUPID, AATTRACT) ~ AATTRACT,
+  data = SD_data, jitter.y = TRUE,
+  ylab = "Speed-Dating Group",
+  main = "Dotplot of \'AATTRACT\' for Speed-Dating Groups")
+```
+
+
+
+
+
