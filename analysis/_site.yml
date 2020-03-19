@@ -1,0 +1,17 @@
+name: "Narcissism-and-Romantic-Relationship-Initiation-In-Emerging-Adulthood"
+output_dir: ../docs
+navbar:
+  title: "Narcissism-and-Romantic-Relationship-Initiation-In-Emerging-Adulthood"
+  left:
+  - text: Home
+    href: index.html
+  - text: About
+    href: about.html
+  - text: License
+    href: license.html
+output:
+  workflowr::wflow_html:
+    toc: yes
+    toc_float: yes
+    theme: cosmo
+    highlight: textmate
